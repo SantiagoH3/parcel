@@ -33,10 +33,7 @@ export default class MainAssetGraph implements IMainAssetGraph {
       value: null
     });
 
-    graph.addEdge({
-      from: 'root',
-      to: assetNode.id
-    });
+    graph.addEdge('root', assetNode.id);
 
     return new MutableBundle({
       id: 'bundle:' + asset.id,
